@@ -1,42 +1,237 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+
+body {
+  background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background: linear-gradient(135deg, #08cfd2, #f8f8f8);
+  color: #000000;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header-top {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.header-logo {
+  position: absolute;
+  left: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header-title {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 2.5rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+}
+
+.nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav a {
+  color: #f4f5f7;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+/* Card Styles */
+/* Add this to your App.css */
+
+/* Card Styles with Animated Border */
 .card {
-  padding: 2em;
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid transparent
 }
 
-.read-the-docs {
-  color: #888;
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  /* Updated gradient with a subtle light color */
+  background: linear-gradient(45deg, 
+    #ffffff, 
+    #ffffff 40%, 
+    #8defec 45%, 
+    #ffffff 55%, 
+    #ffffff 60%, 
+    #ffffff);
+  background-size: 400% 400%;
+  animation: rotateBorder 5s linear infinite;
+}
+
+/* Keyframes for rotating border */
+@keyframes rotateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.company-info {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: #1a73e8;
+}
+
+/* Button Styles */
+button {
+  background: #1a73e8;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+}
+
+button:hover {
+  background: #1964c7;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background: #242424;
+  color: #3e3b3b;
+  background: linear-gradient(135deg, #08cfd2, #efefef);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+  }
 }
