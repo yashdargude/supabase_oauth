@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { supabase } from "../supabaseClient";
 import googleLogo from "./assets/Google.png"; // import the Google logo
-
+import linkedinLogo from "./assets/linkedin.png"; // import the linkedin logo
 function App() {
   const [session, setSession] = useState(null);
 
@@ -84,6 +84,14 @@ function App() {
           &copy; {new Date().getFullYear()} {companyName} IT Services. All
           rights reserved.
         </p>
+        <a
+          href="https://www.linkedin.com/company/doraagent/" // update this URL
+          target="_blank"
+          rel="noopener noreferrer"
+          className="linkedin-link"
+        >
+          <img src={linkedinLogo} alt="LinkedIn" className="linkedin-logo" />
+        </a>
       </footer>
     </div>
   );
