@@ -143,9 +143,11 @@ body {
 }
 
 .card h2 {
+  font-size: 1.75rem;
   margin-bottom: 1rem;
-  font-size: 2rem;
   color: #333;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .company-info {
@@ -171,6 +173,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   gap: 0.5rem;

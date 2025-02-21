@@ -58,7 +58,9 @@ function App() {
               Welcome,{" "}
               {session.user.user_metadata.full_name
                 ? session.user.user_metadata.full_name
-                : session.user.email}
+                : ""}
+              <br />
+              {session.user.email}
             </h2>
             <p className="company-info">{companyInfo}</p>
             <p className="quote">"{companyQuote}"</p>
