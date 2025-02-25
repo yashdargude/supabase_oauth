@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { supabase } from "../supabaseClient";
 import googleLogo from "./assets/Google.png"; // import the Google logo
-import linkedinLogo from "./assets/linkedin.png"; // import the linkedin logo
+import LinkedinLogo from "./assets/Linkedin.png"; // import the linkedin logo
 function App() {
   const [session, setSession] = useState(null);
 
@@ -64,7 +64,9 @@ function App() {
             </h2>
             <p className="company-info">{companyInfo}</p>
             <p className="quote">"{companyQuote}"</p>
-            <button onClick={signOut}>Sign out</button>
+            <button className="signout" onClick={signOut}>
+              Sign out
+            </button>
           </>
         ) : (
           <>
@@ -90,7 +92,7 @@ function App() {
           rel="noopener noreferrer"
           className="linkedin-link"
         >
-          <img src={linkedinLogo} alt="LinkedIn" className="linkedin-logo" />
+          <img src={LinkedinLogo} alt="LinkedIn" className="linkedin-logo" />
         </a>
       </footer>
     </div>

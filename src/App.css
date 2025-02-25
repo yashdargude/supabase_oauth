@@ -232,6 +232,11 @@ button:active {
   transition: transform 0.2s ease;
 }
 
+.signout{
+  align-items: center;
+  justify-content: center;
+}
+
 .linkedin-link:hover .linkedin-logo {
   transform: scale(1.1);
 }
