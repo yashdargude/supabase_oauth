@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { supabase } from "../supabaseClient";
 import googleLogo from "./assets/Google.png"; // import the Google logo
-import linkedinLogo from "./assets/linkedin.png"; // import the linkedin logo
+import linkedinLogo from "./assets/Linkedin.png"; // import the linkedin logo
 function App() {
   const [session, setSession] = useState(null);
 
